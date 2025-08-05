@@ -40,7 +40,7 @@ section {
   margin: 0 auto;
 }
 
-/* Player e container */
+/* Player */
 #live-player-container {
   position: relative;
   width: 100%;
@@ -57,7 +57,7 @@ section {
   border: none;
 }
 
-/* Card Pix */
+/* QR Code Pix */
 #pix-card {
   position: absolute;
   top: 10px;
@@ -136,14 +136,13 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsividade para telas pequenas */
+/* Responsivo: celular */
 @media (max-width: 480px) {
   #live-player-container {
     max-width: 100%;
     aspect-ratio: 16 / 9;
   }
 
-  /* QR Code fica fora do vídeo, sem position absolute */
   #pix-card {
     position: static;
     width: 180px;
@@ -167,8 +166,7 @@ footer {
     padding: 6px 12px;
   }
 
-  .fullscreen-button {
-    font-size: 16px;
-    padding: 12px 24px;
+  .fullscreen-button-container {
+    display: none;
   }
 }
