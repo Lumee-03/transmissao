@@ -12,9 +12,9 @@ function entrarEmTelaCheia() {
       alert("Não foi possível ativar a tela cheia neste dispositivo.");
     });
   } else if (elem.webkitRequestFullscreen) {
-    elem.webkitRequestFullscreen();
+    elem.webkitRequestFullscreen(); // Safari
   } else if (elem.msRequestFullscreen) {
-    elem.msRequestFullscreen();
+    elem.msRequestFullscreen(); // IE11
   } else {
     alert("Tela cheia não suportada pelo seu navegador.");
   }
