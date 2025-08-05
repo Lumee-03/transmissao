@@ -15,19 +15,27 @@
   <section id="home">
     <h2>Transmissão Ao Vivo</h2>
 
-    <!-- Player de vídeo com QR Code sobreposto -->
+    <!-- QR Code para CELULAR (acima do vídeo) -->
+    <div id="pix-card-mobile">
+      <h3>Ajude com um Pix</h3>
+      <img src="meu-pix.png" alt="QR Code Pix" />
+      <p id="pix-key-mobile">meuemail@pix.com.br</p>
+      <button onclick="copiarPixMobile()">Copiar Pix</button>
+    </div>
+
+    <!-- Player com QR sobreposto no PC -->
     <div id="live-player-container">
-      <div id="pix-card">
+      <!-- QR Code para DESKTOP (dentro do player) -->
+      <div id="pix-card-desktop">
         <h3>Ajude com um Pix</h3>
         <img src="meu-pix.png" alt="QR Code Pix" />
-        <p id="pix-key">meuemail@pix.com.br</p>
-        <button onclick="copiarPix()">Copiar Pix</button>
+        <p id="pix-key-desktop">meuemail@pix.com.br</p>
+        <button onclick="copiarPixDesktop()">Copiar Pix</button>
       </div>
 
       <iframe src="https://embedflix.top/tv/player.php?id=espn" allowfullscreen></iframe>
     </div>
 
-    <!-- Botão de Tela Cheia (somente desktop) -->
     <div class="fullscreen-button-container">
       <button class="fullscreen-button" onclick="entrarEmTelaCheia()">
         🔲 Assistir em Tela Cheia
@@ -42,4 +50,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
