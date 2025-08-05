@@ -24,14 +24,9 @@ section {
   margin: 0 auto;
 }
 
-/* Correção: QR Code posicionado dentro da seção corretamente */
-#home {
-  position: relative;
-}
-
 /* Player de vídeo */
 #live-player-container {
-  position: relative;
+  position: relative; /* necessário para posicionar o QR Code dentro */
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -46,7 +41,7 @@ section {
   border: none;
 }
 
-/* QR Code Pix */
+/* QR Code Pix - sobreposto ao vídeo */
 #pix-card {
   position: absolute;
   top: 10px;
@@ -155,7 +150,6 @@ footer {
     padding: 6px 12px;
   }
 
-  /* Oculta botão de tela cheia no celular */
   .fullscreen-button-container {
     display: none;
   }
