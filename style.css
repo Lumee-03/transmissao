@@ -41,6 +41,47 @@ footer {
   background-color: #333;
   color: white;
   padding: 10px;
+
+  #pix-card {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+#pix-card img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+#pix-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+
+#pix-card button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#pix-card button:hover {
+  background-color: #555;
+}
+
   position: fixed;
   width: 100%;
   bottom: 0;
