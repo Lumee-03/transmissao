@@ -1,3 +1,4 @@
+/* Reset e base */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -24,9 +25,9 @@ section {
   margin: 0 auto;
 }
 
-/* Player de vídeo */
+/* Container do player */
 #live-player-container {
-  position: relative; /* necessário para posicionar o QR Code dentro */
+  position: relative;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -41,8 +42,8 @@ section {
   border: none;
 }
 
-/* QR Code Pix - sobreposto ao vídeo */
-#pix-card {
+/* QR Code - versão DESKTOP (sobreposta ao player) */
+#pix-card-desktop {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -52,28 +53,32 @@ section {
   padding: 10px;
   width: 160px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 10;
+  display: block;
 }
 
-#pix-card img {
+#pix-card-desktop img,
+#pix-card-mobile img {
   width: 100%;
   height: auto;
   margin: 8px 0;
 }
 
-#pix-card h3 {
+#pix-card-desktop h3,
+#pix-card-mobile h3 {
   margin: 0 0 6px 0;
   font-size: 15px;
 }
 
-#pix-card p {
+#pix-card-desktop p,
+#pix-card-mobile p {
   font-size: 13px;
   margin-bottom: 8px;
   word-break: break-word;
 }
 
-#pix-card button {
+#pix-card-desktop button,
+#pix-card-mobile button {
   background-color: #333;
   color: white;
   border: none;
@@ -83,11 +88,25 @@ section {
   font-size: 13px;
 }
 
-#pix-card button:hover {
+#pix-card-desktop button:hover,
+#pix-card-mobile button:hover {
   background-color: #555;
 }
 
-/* Botão de Tela Cheia */
+/* QR Code - versão MOBILE (fora do player) */
+#pix-card-mobile {
+  display: none;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 12px;
+  width: 180px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão tela cheia */
 .fullscreen-button-container {
   display: flex;
   justify-content: center;
@@ -122,32 +141,12 @@ footer {
 
 /* Responsivo: celular */
 @media (max-width: 480px) {
-  #live-player-container {
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
+  #pix-card-desktop {
+    display: none;
   }
 
-  #pix-card {
-    position: static;
-    width: 180px;
-    margin: 0 auto 15px auto;
-    padding: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 12px;
-    font-size: 14px;
-  }
-
-  #pix-card h3 {
-    font-size: 16px;
-  }
-
-  #pix-card p {
-    font-size: 13px;
-  }
-
-  #pix-card button {
-    font-size: 13px;
-    padding: 6px 12px;
+  #pix-card-mobile {
+    display: block;
   }
 
   .fullscreen-button-container {
