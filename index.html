@@ -10,20 +10,12 @@
 
   <header>
     <h1>Bem-vindo ao Meu Site de Transmissões de Jogos</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Início</a></li>
-        <li><a href="#jogos">Jogos</a></li>
-        <li><a href="#noticias">Notícias</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-      </ul>
-    </nav>
   </header>
 
   <section id="home">
     <h2>Transmissão Ao Vivo</h2>
 
-    <!-- Pix card: fica acima do vídeo no celular, sobreposto no desktop -->
+    <!-- QR Code Pix -->
     <div id="pix-card">
       <h3>Ajude com um Pix</h3>
       <img src="meu-pix.png" alt="QR Code Pix" />
@@ -31,13 +23,12 @@
       <button onclick="copiarPix()">Copiar Pix</button>
     </div>
 
+    <!-- Player de vídeo -->
     <div id="live-player-container">
-      <iframe
-        src="https://embedflix.top/tv/player.php?id=espn"
-        allowfullscreen
-      ></iframe>
+      <iframe src="https://embedflix.top/tv/player.php?id=espn" allowfullscreen></iframe>
     </div>
 
+    <!-- Botão de Tela Cheia (apenas desktop) -->
     <div class="fullscreen-button-container">
       <button class="fullscreen-button" onclick="entrarEmTelaCheia()">
         🔲 Assistir em Tela Cheia
@@ -45,27 +36,6 @@
     </div>
   </section>
 
-  <section id="jogos">
-    <h2>Próximos Jogos</h2>
-    <ul>
-      <li>Jogo 1: Time A vs Time B - Data e Hora</li>
-      <li>Jogo 2: Time C vs Time D - Data e Hora</li>
-    </ul>
-  </section>
-
-  <section id="noticias">
-    <h2>Últimas Notícias</h2>
-    <p>Notícia 1: Detalhes do campeonato...</p>
-    <p>Notícia 2: Novidades sobre a transmissão...</p>
-  </section>
-
-  <section id="sobre">
-    <h2>Sobre o Projeto</h2>
-    <p>
-      Estamos criando um espaço para a transmissão de jogos amadores e campeonatos
-      locais. Acompanhe nossos eventos ao vivo e fique por dentro das novidades!
-    </p>
-  </section>
 
   <footer>
     <p>&copy; 2025 Transmissão de Jogos | Todos os direitos reservados</p>
