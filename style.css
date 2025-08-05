@@ -54,7 +54,6 @@ section {
   width: 160px;
   text-align: center;
   z-index: 10;
-  display: block;
 }
 
 #pix-card-desktop img,
@@ -151,5 +150,12 @@ footer {
 
   .fullscreen-button-container {
     display: none;
+  }
+}
+
+/* Aumenta o QR Code desktop em telas maiores */
+@media (min-width: 768px) {
+  #pix-card-desktop {
+    width: 220px; /* QR Code maior no desktop */
   }
 }
