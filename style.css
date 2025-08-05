@@ -24,6 +24,11 @@ section {
   margin: 0 auto;
 }
 
+/* Correção: QR Code posicionado dentro da seção corretamente */
+#home {
+  position: relative;
+}
+
 /* Player de vídeo */
 #live-player-container {
   position: relative;
@@ -120,7 +125,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsivo para celular */
+/* Responsivo: celular */
 @media (max-width: 480px) {
   #live-player-container {
     max-width: 100%;
