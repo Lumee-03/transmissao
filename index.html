@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Transmissão de Jogos ao Vivo</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
     <h1>Bem-vindo ao Meu Site de Transmissões de Jogos</h1>
     <nav>
@@ -21,17 +22,17 @@
 
   <section id="home">
     <h2>Transmissão Ao Vivo</h2>
-    <div id="live-player">
-      <iframe width="560" height="315" src="https://embedflix.top/tv/player.php?id=espn" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <!-- Card Pix na transmissão -->
-<div id="pix-card">
-  <h3>Ajude com um Pix</h3>
-  <img src="meu-pix.png" alt="QR Code Pix">
-  <p id="pix-key">meuemail@pix.com.br</p>
-  <button onclick="copiarPix()">Copiar Pix</button>
-</div>
+    <div id="live-player-container">
+      <iframe src="https://embedflix.top/tv/player.php?id=espn" allowfullscreen></iframe>
 
+      <!-- PIX sobre o player -->
+      <div id="pix-card">
+        <h3>Ajude com um Pix</h3>
+        <img src="meu-pix.png" alt="QR Code Pix" />
+        <p id="pix-key">meuemail@pix.com.br</p>
+        <button onclick="copiarPix()">Copiar Pix</button>
+      </div>
+    </div>
   </section>
 
   <section id="jogos">
@@ -60,4 +61,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
