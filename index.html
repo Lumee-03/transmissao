@@ -20,20 +20,26 @@
     </nav>
   </header>
 
-  <section id="home">
-    <h2>Transmissão Ao Vivo</h2>
-    <div id="live-player-container">
-      <iframe src="https://embedflix.top/tv/player.php?id=espn" allowfullscreen></iframe>
+ <section id="home">
+  <h2>Transmissão Ao Vivo</h2>
+  <div id="live-player-container">
+    <iframe id="player" src="https://embedflix.top/tv/player.php?id=espn" allowfullscreen></iframe>
 
-      <!-- PIX sobre o player -->
-      <div id="pix-card">
-        <h3>Ajude com um Pix</h3>
-        <img src="meu-pix.png" alt="QR Code Pix" />
-        <p id="pix-key">meuemail@pix.com.br</p>
-        <button onclick="copiarPix()">Copiar Pix</button>
-      </div>
+    <!-- PIX sobre o player -->
+    <div id="pix-card">
+      <h3>Ajude com um Pix</h3>
+      <img src="meu-pix.png" alt="QR Code Pix" />
+      <p id="pix-key">meuemail@pix.com.br</p>
+      <button onclick="copiarPix()">Copiar Pix</button>
     </div>
-  </section>
+  </div>
+
+  <!-- Botão tela cheia -->
+  <div style="text-align: center; margin-top: 10px;">
+    <button onclick="entrarEmTelaCheia()">Tela cheia</button>
+  </div>
+</section>
+
 
   <section id="jogos">
     <h2>Próximos Jogos</h2>
