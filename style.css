@@ -1,3 +1,4 @@
+/* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -39,6 +40,7 @@ section {
   margin: 0 auto;
 }
 
+/* Player e container */
 #live-player-container {
   position: relative;
   width: 100%;
@@ -55,6 +57,7 @@ section {
   border: none;
 }
 
+/* Card Pix */
 #pix-card {
   position: absolute;
   top: 10px;
@@ -73,6 +76,11 @@ section {
   width: 100%;
   height: auto;
   margin: 8px 0;
+}
+
+#pix-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
 }
 
 #pix-card p {
@@ -95,6 +103,7 @@ section {
   background-color: #555;
 }
 
+/* Botão tela cheia */
 .fullscreen-button-container {
   display: flex;
   justify-content: center;
@@ -118,6 +127,7 @@ section {
   transform: scale(1.05);
 }
 
+/* Rodapé */
 footer {
   text-align: center;
   background-color: #333;
@@ -134,28 +144,28 @@ footer {
   }
 
   #pix-card {
-    width: 140px;
-    padding: 8px;
-    top: 8px;
-    right: 8px;
-    font-size: 12px;
+    width: 120px !important;
+    padding: 6px !important;
+    top: 6px !important;
+    right: 6px !important;
+    font-size: 11px !important;
   }
 
   #pix-card h3 {
-    font-size: 14px;
+    font-size: 13px !important;
   }
 
   #pix-card p {
-    font-size: 11px;
+    font-size: 10px !important;
   }
 
   #pix-card button {
-    font-size: 12px;
-    padding: 5px 8px;
+    font-size: 11px !important;
+    padding: 4px 6px !important;
   }
 
   .fullscreen-button {
-    font-size: 16px;
-    padding: 12px 24px;
+    font-size: 16px !important;
+    padding: 12px 24px !important;
   }
 }
