@@ -126,3 +126,37 @@ footer {
   transform: scale(1.05);
 }
 
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+  #live-player-container {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  #pix-card {
+    width: 140px;
+    padding: 8px;
+    top: 8px;
+    right: 8px;
+    font-size: 12px;
+  }
+
+  #pix-card h3 {
+    font-size: 14px;
+  }
+
+  #pix-card p {
+    font-size: 11px;
+  }
+
+  #pix-card button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .fullscreen-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
