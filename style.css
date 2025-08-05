@@ -153,9 +153,17 @@ footer {
   }
 }
 
-/* Aumenta o QR Code desktop em telas maiores */
+/* QR Code desktop maior verticalmente */
 @media (min-width: 768px) {
   #pix-card-desktop {
-    width: 220px; /* QR Code maior no desktop */
+    width: 160px;     /* largura fixa */
+    height: 220px;    /* altura maior */
+    padding: 15px 10px; /* espaço extra para o conteúdo */
+  }
+
+  #pix-card-desktop img {
+    height: 140px;    /* imagem maior na altura */
+    width: auto;
+    margin: 10px 0;
   }
 }
