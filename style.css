@@ -153,17 +153,40 @@ footer {
   }
 }
 
-/* QR Code desktop maior verticalmente */
+/* QR Code desktop mais harmônico */
 @media (min-width: 768px) {
   #pix-card-desktop {
-    width: 160px;     /* largura fixa */
-    height: 220px;    /* altura maior */
-    padding: 15px 10px; /* espaço extra para o conteúdo */
+    width: 180px;
+    height: 200px;
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   }
 
   #pix-card-desktop img {
-    height: 140px;    /* imagem maior na altura */
+    height: 130px;
     width: auto;
-    margin: 10px 0;
+    margin: 8px 0;
+    flex-shrink: 0;
+  }
+
+  #pix-card-desktop h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  #pix-card-desktop p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  #pix-card-desktop button {
+    font-size: 14px;
+    padding: 7px 12px;
   }
 }
