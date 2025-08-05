@@ -102,3 +102,27 @@ footer {
   padding: 10px;
   margin-top: 40px;
 }
+
+.fullscreen-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.fullscreen-button {
+  background-color: #d946ef;
+  color: white;
+  font-size: 18px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.fullscreen-button:hover {
+  background-color: #a21caf;
+  transform: scale(1.05);
+}
+
