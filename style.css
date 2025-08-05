@@ -143,29 +143,32 @@ footer {
     aspect-ratio: 16 / 9;
   }
 
+  /* QR Code fica fora do vídeo, sem position absolute */
   #pix-card {
-    width: 120px !important;
-    padding: 6px !important;
-    top: 6px !important;
-    right: 6px !important;
-    font-size: 11px !important;
+    position: static;
+    width: 180px;
+    margin: 0 auto 15px auto;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    font-size: 14px;
   }
 
   #pix-card h3 {
-    font-size: 13px !important;
+    font-size: 16px;
   }
 
   #pix-card p {
-    font-size: 10px !important;
+    font-size: 13px;
   }
 
   #pix-card button {
-    font-size: 11px !important;
-    padding: 4px 6px !important;
+    font-size: 13px;
+    padding: 6px 12px;
   }
 
   .fullscreen-button {
-    font-size: 16px !important;
-    padding: 12px 24px !important;
+    font-size: 16px;
+    padding: 12px 24px;
   }
 }
