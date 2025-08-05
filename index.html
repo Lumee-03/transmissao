@@ -22,18 +22,20 @@
 
   <section id="home">
     <h2>Transmissão Ao Vivo</h2>
+
+    <!-- Pix card: fica acima do vídeo no celular, sobreposto no desktop -->
+    <div id="pix-card">
+      <h3>Ajude com um Pix</h3>
+      <img src="meu-pix.png" alt="QR Code Pix" />
+      <p id="pix-key">meuemail@pix.com.br</p>
+      <button onclick="copiarPix()">Copiar Pix</button>
+    </div>
+
     <div id="live-player-container">
       <iframe
         src="https://embedflix.top/tv/player.php?id=espn"
         allowfullscreen
-        ></iframe>
-
-      <div id="pix-card">
-        <h3>Ajude com um Pix</h3>
-        <img src="meu-pix.png" alt="QR Code Pix" />
-        <p id="pix-key">meuemail@pix.com.br</p>
-        <button onclick="copiarPix()">Copiar Pix</button>
-      </div>
+      ></iframe>
     </div>
 
     <div class="fullscreen-button-container">
@@ -59,7 +61,10 @@
 
   <section id="sobre">
     <h2>Sobre o Projeto</h2>
-    <p>Estamos criando um espaço para a transmissão de jogos amadores e campeonatos locais. Acompanhe nossos eventos ao vivo e fique por dentro das novidades!</p>
+    <p>
+      Estamos criando um espaço para a transmissão de jogos amadores e campeonatos
+      locais. Acompanhe nossos eventos ao vivo e fique por dentro das novidades!
+    </p>
   </section>
 
   <footer>
