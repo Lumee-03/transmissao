@@ -178,12 +178,13 @@ footer {
     margin-bottom: 6px;
   }
 
-  #pix-card-desktop p {
-    font-size: 14px;
+   #pix-card-desktop p {
+    font-size: 12px;
     margin-bottom: 8px;
     text-align: center;
     word-break: break-word;
   }
+
 
   #pix-card-desktop button {
     font-size: 14px;
