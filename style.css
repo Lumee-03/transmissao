@@ -178,14 +178,16 @@ footer {
     margin-bottom: 6px;
   }
 
-  #pix-card-desktop p {
-  font-size: 13px;                 /* Tamanho equilibrado */
-  line-height: 1.4;                /* Espaço entre linhas */
+#pix-card-desktop p {
+  font-size: 12.5px;
+  white-space: nowrap;       /* Não quebra linha */
+  overflow: hidden;          /* Oculta o que passar do limite */
+  text-overflow: ellipsis;   /* Adiciona "..." se estourar (opcional) */
   text-align: center;
-  word-break: break-word;          /* Quebra o e-mail se precisar */
-  max-width: 100%;                 /* Garante que não ultrapassa */
+  max-width: 100%;
   margin: 4px 0 8px 0;
 }
+
 
 
 
