@@ -178,18 +178,15 @@ footer {
     margin-bottom: 6px;
   }
 
-#pix-card-desktop p {
-  font-size: 11.5px;
-  white-space: nowrap;        /* Tudo em uma linha */
-  overflow: hidden;           /* Esconde o que passar */
-  text-overflow: ellipsis;    /* Adiciona "..." se estourar (opcional) */
+
+  #pix-card-desktop p {
+  font-size: clamp(10px, 1.1vw, 12px);
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: unset;
   text-align: center;
   margin: 4px 0 8px 0;
-  max-width: 100%;
 }
-
-
-
 
   #pix-card-desktop button {
     font-size: 14px;
