@@ -15,15 +15,7 @@
   <section id="home">
     <h2>Transmissão Ao Vivo</h2>
 
-    <!-- QR Code Pix desktop -->
-    <div id="pix-card-desktop">
-      <h3>Ajude com um Pix 💜</h3>
-      <img src="meu-pix.png" alt="QR Code Pix" />
-      <p id="pix-key">yangoncalves915@gmail.com</p>
-      <button onclick="copiarPix()">Copiar Pix</button>
-    </div>
-
-    <!-- QR Code Pix mobile -->
+    <!-- QR Code Pix MOBILE (fora do player, acima) -->
     <div id="pix-card-mobile">
       <h3>Ajude com um Pix 💜</h3>
       <img src="meu-pix.png" alt="QR Code Pix" />
@@ -34,6 +26,14 @@
     <!-- Player principal -->
     <div id="live-player-container">
       <iframe src="https://embedflix.top/tv/player.php?id=espn" allowfullscreen></iframe>
+
+      <!-- QR Code Pix DESKTOP (sobreposto dentro do player) -->
+      <div id="pix-card-desktop">
+        <h3>Ajude com um Pix 💜</h3>
+        <img src="meu-pix.png" alt="QR Code Pix" />
+        <p id="pix-key">yangoncalves915@gmail.com</p>
+        <button onclick="copiarPix()">Copiar Pix</button>
+      </div>
     </div>
 
     <!-- Botão de Tela Cheia (desktop) -->
