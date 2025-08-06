@@ -15,32 +15,51 @@
   <section id="home">
     <h2>Transmissão Ao Vivo</h2>
 
-    <!-- QR Code para CELULAR (acima do vídeo) -->
-    <div id="pix-card-mobile">
-      <h3>Ajude com um Pix</h3>
+    <!-- QR Code Pix desktop -->
+    <div id="pix-card-desktop">
+      <h3>Ajude com um Pix 💜</h3>
       <img src="meu-pix.png" alt="QR Code Pix" />
-      <p id="pix-key-mobile">yangoncalves915@gmail.com</p>
-      <button onclick="copiarPixMobile()">Copiar Pix</button>
+      <p id="pix-key">yangoncalves915@gmail.com</p>
+      <button onclick="copiarPix()">Copiar Pix</button>
     </div>
 
-    <!-- Player com QR sobreposto no PC -->
-    <div id="live-player-container">
-      <!-- QR Code para DESKTOP (dentro do player) -->
-      <div id="pix-card-desktop">
-        <h3>Ajude com um Pix</h3>
-        <img src="meu-pix.png" alt="QR Code Pix" />
-        <p id="pix-key-desktop">yangoncalves915@gmail.com</p>
-        <button onclick="copiarPixDesktop()">Copiar Pix</button>
-      </div>
+    <!-- QR Code Pix mobile -->
+    <div id="pix-card-mobile">
+      <h3>Ajude com um Pix 💜</h3>
+      <img src="meu-pix.png" alt="QR Code Pix" />
+      <p id="pix-key">yangoncalves915@gmail.com</p>
+      <button onclick="copiarPix()">Copiar Pix</button>
+    </div>
 
+    <!-- Player principal -->
+    <div id="live-player-container">
       <iframe src="https://embedflix.top/tv/player.php?id=espn" allowfullscreen></iframe>
     </div>
 
+    <!-- Botão de Tela Cheia (desktop) -->
     <div class="fullscreen-button-container">
-      <button class="fullscreen-button" onclick="entrarEmTelaCheia()">
-        🔲 Assistir em Tela Cheia
-      </button>
+      <button class="fullscreen-button" onclick="entrarEmTelaCheia()">🔲 Assistir em Tela Cheia</button>
     </div>
+
+    <!-- Seção de outros jogos -->
+    <div id="other-games">
+      <h3>Outros Jogos ao Vivo</h3>
+      <div class="cards-container">
+        <a href="https://embedflix.top/tv/player.php?id=game1" class="game-card" target="_blank" rel="noopener">
+          <img src="https://via.placeholder.com/160x90?text=Jogo+1" alt="Jogo 1" />
+          <p>Jogo 1: Time X vs Time Y</p>
+        </a>
+        <a href="https://embedflix.top/tv/player.php?id=game2" class="game-card" target="_blank" rel="noopener">
+          <img src="https://via.placeholder.com/160x90?text=Jogo+2" alt="Jogo 2" />
+          <p>Jogo 2: Time A vs Time B</p>
+        </a>
+        <a href="https://embedflix.top/tv/player.php?id=game3" class="game-card" target="_blank" rel="noopener">
+          <img src="https://via.placeholder.com/160x90?text=Jogo+3" alt="Jogo 3" />
+          <p>Jogo 3: Time C vs Time D</p>
+        </a>
+      </div>
+    </div>
+
   </section>
 
   <footer>
