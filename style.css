@@ -3,19 +3,24 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #0a0a0a, #0d3b66);
+  color: #a0c4ff;
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+  background-color: #0a0a0a;
+  color: #64b5f6;
+  padding: 12px 10px;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(30, 129, 176, 0.5);
+}
+
+h1, h2, h3 {
+  color: #64b5f6;
+  text-shadow: 0 0 4px #1e81b0;
 }
 
 h2 {
-  color: #333;
-  text-align: center;
   margin-top: 20px;
 }
 
@@ -23,6 +28,16 @@ section {
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
+  background: rgba(10, 10, 10, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(30, 129, 176, 0.3);
+}
+
+/* Listas e itens */
+ul li, p {
+  color: #a0c4ff;
+  font-size: 16px;
+  margin: 6px 0;
 }
 
 /* Container do player */
@@ -32,14 +47,17 @@ section {
   max-width: 800px;
   margin: 0 auto;
   aspect-ratio: 16 / 9;
-  background: black;
+  background: #000;
   overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #1e81b0;
 }
 
 #live-player-container iframe {
   width: 100%;
   height: 100%;
   border: none;
+  border-radius: 12px;
 }
 
 /* QR Code - versão DESKTOP (sobreposta ao player) */
@@ -47,20 +65,22 @@ section {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border: 2px solid #333;
+  background: linear-gradient(145deg, #1e81b0, #0d3b66);
+  border: 2px solid #64b5f6;
   border-radius: 10px;
   padding: 12px 10px;
-  width: 200px;            /* aumentamos largura */
-  height: auto;            /* altura automática */
+  width: 200px;
+  height: auto;
   text-align: center;
   z-index: 10;
+  color: #a0c4ff;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  box-shadow: 0 0 15px #64b5f6;
 }
 
 #pix-card-desktop img,
@@ -68,53 +88,84 @@ section {
   width: 100%;
   height: auto;
   margin: 8px 0;
+  border-radius: 6px;
+  box-shadow: 0 0 12px #64b5f6;
+}
+
+@keyframes neonGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #64b5f6,
+      0 0 10px #64b5f6,
+      0 0 20px #1e81b0,
+      0 0 30px #1e81b0,
+      0 0 40px #0d3b66;
+    color: #a0c4ff;
+  }
+  50% {
+    text-shadow:
+      0 0 8px #64b5f6,
+      0 0 16px #64b5f6,
+      0 0 24px #1e81b0,
+      0 0 36px #1e81b0,
+      0 0 50px #0d3b66;
+    color: #cce7ff;
+  }
 }
 
 #pix-card-desktop h3 {
   font-size: 14px;
   margin-bottom: 6px;
   text-align: center;
-  white-space: normal; /* permite quebra se necessário */
+  white-space: normal;
   line-height: 1.2;
+  text-shadow: 0 0 4px #000;
+  animation: neonGlow 2.5s ease-in-out infinite alternate;
 }
 
 #pix-card-desktop p {
   font-size: 11.5px;
-  white-space: nowrap;       /* mantém tudo em uma linha */
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;   /* mostra "..." se não couber */
+  text-overflow: ellipsis;
   text-align: center;
   margin: 4px 0 8px 0;
   max-width: 100%;
+  color: #cce7ff;
+  text-shadow: 0 0 3px #000;
 }
 
 #pix-card-desktop button,
 #pix-card-mobile button {
-  background-color: #333;
+  background: linear-gradient(135deg, #1e81b0, #64b5f6);
   color: white;
   border: none;
   padding: 6px 10px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 13px;
+  box-shadow: 0 2px 6px rgba(30, 129, 176, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #pix-card-desktop button:hover,
 #pix-card-mobile button:hover {
-  background-color: #555;
+  background: linear-gradient(135deg, #64b5f6, #1e81b0);
+  box-shadow: 0 0 14px #64b5f6;
 }
 
 /* QR Code - versão MOBILE (fora do player) */
 #pix-card-mobile {
   display: none;
-  background-color: #fff;
-  border: 2px solid #333;
+  background-color: #0a0a0a;
+  border: 2px solid #64b5f6;
   border-radius: 10px;
   padding: 12px;
   width: 180px;
   margin: 0 auto 20px auto;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(30, 129, 176, 0.7);
+  color: #a0c4ff;
 }
 
 /* Botão tela cheia */
@@ -125,29 +176,31 @@ section {
 }
 
 .fullscreen-button {
-  background-color: #d946ef;
+  background: linear-gradient(135deg, #1e81b0, #64b5f6);
   color: white;
   font-size: 18px;
   padding: 14px 28px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(30, 129, 176, 0.7);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.3s ease;
 }
 
 .fullscreen-button:hover {
-  background-color: #a21caf;
+  background: linear-gradient(135deg, #64b5f6, #1e81b0);
   transform: scale(1.05);
+  box-shadow: 0 0 20px #64b5f6;
 }
 
 /* Rodapé */
 footer {
   text-align: center;
-  background-color: #333;
-  color: white;
+  background-color: #0a0a0a;
+  color: #64b5f6;
   padding: 10px;
   margin-top: 40px;
+  box-shadow: 0 -2px 8px rgba(30, 129, 176, 0.5);
 }
 
 /* Responsivo: celular */
@@ -191,6 +244,8 @@ footer {
     text-align: center;
     white-space: normal;
     line-height: 1.2;
+    text-shadow: 0 0 4px #000;
+    animation: neonGlow 2.5s ease-in-out infinite alternate;
   }
 
   #pix-card-desktop p {
@@ -201,6 +256,8 @@ footer {
     text-align: center;
     margin: 4px 0 8px 0;
     max-width: 100%;
+    color: #cce7ff;
+    text-shadow: 0 0 3px #000;
   }
 
   #pix-card-desktop button {
