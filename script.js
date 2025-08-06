@@ -1,28 +1,23 @@
-function copiarPixDesktop() {
-  const chave = document.getElementById("pix-key-desktop").innerText;
-  navigator.clipboard.writeText(chave).then(() => {
-    alert("Chave Pix copiada com sucesso!");
+// Função para copiar o Pix para a área de transferência
+function copiarPix() {
+  const pixKey = document.getElementById('pix-key').innerText;
+  navigator.clipboard.writeText(pixKey).then(() => {
+    alert('Chave Pix copiada: ' + pixKey);
+  }, () => {
+    alert('Falha ao copiar a chave Pix.');
   });
 }
 
-function copiarPixMobile() {
-  const chave = document.getElementById("pix-key-mobile").innerText;
-  navigator.clipboard.writeText(chave).then(() => {
-    alert("Chave Pix copiada com sucesso!");
-  });
-}
-
+// Função para entrar em tela cheia (desktop apenas)
 function entrarEmTelaCheia() {
-  const elem = document.getElementById("live-player-container");
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen().catch(() => {
-      alert("Não foi possível ativar a tela cheia neste dispositivo.");
-    });
-  } else if (elem.webkitRequestFullscreen) {
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    elem.msRequestFullscreen();
-  } else {
-    alert("Tela cheia não suportada pelo seu navegador.");
+  const player = document.getElementById('live-player-container');
+  if (player.requestFullscreen) {
+    player.requestFullscreen();
+  } else if (player.mozRequestFullScreen) { /* Firefox */
+    player.mozRequestFullScreen();
+  } else if (player.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    player.webkitRequestFullscreen();
+  } else if (player.msRequestFullscreen) { /* IE/Edge */
+    player.msRequestFullscreen();
   }
 }
